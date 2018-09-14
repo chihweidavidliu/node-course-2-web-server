@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs')
 let app = express();
-const port = process.env.port || 3000 // get heroku's port environment variable
+const port = process.env.PORT || 3000 // get heroku's port environment variable
 
 app.set('view engine', 'hbs') // initiate hbs
 hbs.registerPartials(__dirname + '/views/partials')
