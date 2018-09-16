@@ -63,6 +63,11 @@ app.get('/bad', (req, res) => {
   res.send({Error: "Error handling request"});
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: "Projects"
+  })
+})
 
 app.listen(port, () => {
   console.log("Server is up on port " + port)
